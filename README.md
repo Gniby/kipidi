@@ -8,6 +8,6 @@ Kipidi is an angular application
 3. MongoDB
 
 * To start an application
-npm start
+1. npm start
 
 
