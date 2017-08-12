@@ -9,7 +9,7 @@ db.once('open', function(){
   //do operations which involve interacting with DB.
 });
 
- //Create a schema for Book
+ //Create a schema for User
   var userSchema = mongoose.Schema({
     first_name: String,
     last_name: String,
@@ -20,6 +20,7 @@ db.once('open', function(){
 	type:String
   });
   
+ // Model for user 
  exports.User = mongoose.model('user', userSchema);
   
  /* 
