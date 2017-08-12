@@ -1,0 +1,47 @@
+<html>
+<body>
+<form>
+<table width="20%" bgcolor="0099CC" align="center">
+
+<tr>
+<td colspan=2><center><font size=4><b>HTML Login Page</b></font></center></td>
+</tr>
+
+<tr>
+<td>Username</td>
+<td><input type="text" name="userid" id="userid"></td>
+</tr>
+
+<tr>
+<td>Password:</td>
+<td><input type="password" size=25 name="pwd"></td>
+</tr>
+
+<tr>
+<td ><input type="Reset"></td>
+<td><input type="button" onclick="check(this.form)" value="Login"></td>
+</tr>
+
+</table>
+</form>
+<script language="javascript">
+function check(form)
+{
+
+console.log(form.userid.value);
+
+if(form.userid.value == "girish" && form.pwd.value == "girish")
+{
+/*window.open('target.html')*/ 
+}
+else
+{
+alert("Error Password or Username")
+}
+}
+</script>
+
+</body>
+</html>
+
+

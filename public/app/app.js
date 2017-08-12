@@ -1,8 +1,8 @@
-var app = angular.module('myapp', ['myapp.controllers', 'myapp.directives']);
+var app = angular.module('myapp', ['myapp.controllers']);
 
 app.config(['$routeProvider', function ($routeProvider) {
     $routeProvider.when('/', {
-        templateUrl: 'partials/index',
+        templateUrl: 'partials/user.html',
         controller: 'IndexController'
     }).otherwise({
         redirectTo: '/'
