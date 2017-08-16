@@ -9,5 +9,5 @@ Kipidi is an angular application
 
 * To start an application
 1. npm start
-
+2.mongod  --dbpath "D:\School Software\mongodata"--->to start DB
 
