@@ -1,0 +1,10 @@
+{
+  "name": "kipidi",
+  "version": "0.0.1",
+  "dependencies": {
+    "jquery": "^3.2.1",
+    "angular": "^1.6.5",
+    "angular-route": "^1.6.5"
+  },
+  "private": true
+}
