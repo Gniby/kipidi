@@ -14,6 +14,7 @@ exports.partials = function(req, res) {
     res.render('partials/' + req.params.name);
 };
 
+
 exports.getUser = function(req,res){
 	 mongodb.User.find({},"",function(err,data){
 	 if (err){
@@ -49,5 +50,45 @@ exports.getUserById = function(req,res){
 };
 
 exports.updateUser = function(req,res){
+	
+};
+
+//admin
+
+exports.getAdmin = function(req,res){
+	 mongodb.Admin.find({},"",function(err,data){
+	 if (err){
+		 res.send({"error":"error"});
+	 } else{
+		 res.send(data);
+	 }
+  });
+};
+
+exports.createAdmin = function(req,res){
+	 console.log(req.body.data);
+  var admin = new mongodb.Admin(req.body.data);	
+  //Saving the model instance to the DB
+  admin.save(function(err){
+    if ( err ){ res.send({"status":"error"})}else{
+    console.log("admin Saved Successfully");
+	res.send({"status":"success"});
+	}
+  });
+};
+
+exports.getAdminById = function(req,res){
+	var id = req.params.id;
+	console.log(id);
+	 mongodb.Admin.find({"admin_id":id},"",function(err,data){
+	 if (err){
+		 res.send({"status":"error"});
+	 } else{
+		 res.send(data);
+	 }
+  });
+};
+
+exports.updateAdmin = function(req,res){
 	
 };

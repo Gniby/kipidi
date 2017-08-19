@@ -1,10 +1,14 @@
 <div>
 <table>
 	<tr>
-		<td>First Name</td>
+		<td>User Type</td>
 	</tr>
 	<tr data-ng-repeat="user in users">
-		<td ng-bind="user.first_name"></td>
+		<td ng-bind="user.user_name"></td>
+		<td ng-bind="user.user_id"></td>
+		<td ng-bind="user.user_password"></td>
+		<td ng-bind="user.user_type"></td>
 	</tr>
 </table>
 </div>
+
