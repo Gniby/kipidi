@@ -13,5 +13,14 @@ controllers.controller('IndexController', ['$scope','$http', function($scope,$ht
 		console.log('error');
 	});
 	
+		$http.get('/admin').then(function(res){
+		$scope.users = res.data;
+		for(var i = 0; i < $scope.users.length;i++){
+			console.log($scope.users[i]);
+		}
+	},function(err){
+		console.log('error');
+	});
+	
 	
 }]);

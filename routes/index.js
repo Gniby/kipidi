@@ -92,3 +92,44 @@ exports.getAdminById = function(req,res){
 exports.updateAdmin = function(req,res){
 	
 };
+
+
+//TS
+
+exports.getTs = function(req,res){
+	 mongodb.Ts.find({},"",function(err,data){
+	 if (err){
+		 res.send({"error":"error"});
+	 } else{
+		 res.send(data);
+	 }
+  });
+};
+
+exports.createTs = function(req,res){
+	 console.log(req.body.data);
+  var ts = new mongodb.Ts(req.body.data);	
+  //Saving the model instance to the DB
+  ts.save(function(err){
+    if ( err ){ res.send({"status":"error"})}else{
+    console.log("Ts Saved Successfully");
+	res.send({"status":"success"});
+	}
+  });
+};
+
+exports.getTsById = function(req,res){
+	var id = req.params.id;
+	console.log(id);
+	 mongodb.Admin.find({"ts_id":id},"",function(err,data){
+	 if (err){
+		 res.send({"status":"error"});
+	 } else{
+		 res.send(data);
+	 }
+  });
+};
+
+exports.updateTs = function(req,res){
+	
+};

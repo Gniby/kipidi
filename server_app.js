@@ -43,6 +43,11 @@ app.post('/admin',routes.createAdmin);
 app.get('/admin/:id',routes.getAdminById);
 app.put('/admin',routes.updateAdmin);
 
+app.get('/ts',routes.getTs);
+app.post('/ts',routes.createTs);
+app.get('/ts/:id',routes.getTsById);
+app.put('/ts',routes.updateTs);
+
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));
